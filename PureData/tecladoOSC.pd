@@ -1,0 +1,14 @@
+#N canvas 94 151 169 196 10;
+#X obj 15 11 inlet;
+#X obj 15 51 unpack i f;
+#X obj 72 79 / -317;
+#X obj 15 80 * -1;
+#X obj 15 103 + 47;
+#X obj 15 133 s tec_nota;
+#X obj 72 109 s tec_P;
+#X connect 0 0 1 0;
+#X connect 1 0 3 0;
+#X connect 1 1 2 0;
+#X connect 2 0 6 0;
+#X connect 3 0 4 0;
+#X connect 4 0 5 0;

@@ -1,0 +1,25 @@
+#N canvas 623 161 638 488 10;
+#X declare -lib mrpeach;
+#X obj 24 -66 import mrpeach;
+#X obj 24 -11 unpackOSC;
+#X obj 110 116 toggle_paso;
+#X obj 151 -34 udpsend;
+#X obj 67 78 scroll;
+#X obj 24 84 reset;
+#X obj 153 80 osc_ritmo;
+#X obj 196 56 osc_banco;
+#X obj 239 80 s onOff;
+#X obj 24 -38 udpreceive 9006;
+#X obj 24 17 routeOSC /reset /scroll /toggle /ritmo /banco /onOff /teclado
+;
+#X obj 327 123 tecladoOSC;
+#X connect 0 0 9 0;
+#X connect 1 0 10 0;
+#X connect 9 0 1 0;
+#X connect 10 0 5 0;
+#X connect 10 1 4 0;
+#X connect 10 2 2 0;
+#X connect 10 3 6 0;
+#X connect 10 4 7 0;
+#X connect 10 5 8 0;
+#X connect 10 6 11 0;

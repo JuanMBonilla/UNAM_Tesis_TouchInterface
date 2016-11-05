@@ -1,0 +1,12 @@
+#N canvas 0 22 274 243 10;
+#X obj 93 66 route 0 1 2 3;
+#X obj 22 127 s r_voz_uno;
+#X obj 102 202 s r_voz_dos;
+#X obj 170 120 s r_voz_cuatro;
+#X obj 143 171 s r_voz_tres;
+#X obj 92 7 inlet;
+#X connect 0 0 1 0;
+#X connect 0 1 2 0;
+#X connect 0 2 4 0;
+#X connect 0 3 3 0;
+#X connect 5 0 0 0;

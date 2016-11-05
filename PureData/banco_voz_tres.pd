@@ -1,0 +1,46 @@
+#N canvas 270 22 654 544 10;
+#X obj 124 -24 inlet;
+#X obj 87 140 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
+-1;
+#X obj 172 110 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X obj 197 92 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
+-1;
+#X obj 213 74 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
+-1;
+#X obj 234 74 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
+-1;
+#X floatatom 71 61 5 0 0 0 - - -;
+#X obj 121 480 outlet;
+#X obj 157 -5 inlet;
+#X obj 124 5 + 1;
+#X obj 124 45 gate 6;
+#X msg 202 137 open /Users/juanmanuelbonilla/Documents/Tesis_Pat/bancoSonidos/cna_v3_2.wav
+;
+#X msg 163 188 open /Users/juanmanuelbonilla/Documents/Tesis_Pat/bancoSonidos/cna_v3_3.wav
+;
+#X msg 210 320 open /Users/juanmanuelbonilla/Documents/Tesis_Pat/bancoSonidos/cna_v3_5.wav
+;
+#X msg 92 239 open /Users/juanmanuelbonilla/Documents/Tesis_Pat/bancoSonidos/cna_v3_1.wav
+;
+#X msg 241 377 open /Users/juanmanuelbonilla/Documents/Tesis_Pat/bancoSonidos/cna_v3_4.wav
+;
+#X connect 0 0 9 0;
+#X connect 1 0 14 0;
+#X connect 2 0 12 0;
+#X connect 3 0 11 0;
+#X connect 4 0 13 0;
+#X connect 5 0 15 0;
+#X connect 8 0 10 1;
+#X connect 9 0 10 0;
+#X connect 10 0 1 0;
+#X connect 10 0 6 0;
+#X connect 10 1 2 0;
+#X connect 10 2 3 0;
+#X connect 10 3 4 0;
+#X connect 10 4 5 0;
+#X connect 11 0 7 0;
+#X connect 12 0 7 0;
+#X connect 13 0 7 0;
+#X connect 14 0 7 0;
+#X connect 15 0 7 0;

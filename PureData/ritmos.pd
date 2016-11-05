@@ -1,0 +1,128 @@
+#N canvas 371 43 887 537 10;
+#X msg 45 117 start;
+#X obj 77 65 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
+-1;
+#X obj 45 175 readsf~ 1;
+#X obj 213 36 openpanel;
+#X obj 218 169 r tempo;
+#X obj 227 202 / 2;
+#X obj 45 94 delay 5;
+#X floatatom 247 240 5 0 0 0 - - -;
+#X msg 133 287 start;
+#X obj 165 235 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X obj 132 322 readsf~ 1;
+#X msg -52 400 open /Users/juanmanuelbonilla/Documents/Tesis_Pat/PureData/AttackKick003.wav
+;
+#X obj 133 264 delay 5;
+#X obj 166 199 delay;
+#X obj 567 96 route;
+#X msg 624 92 1;
+#X obj 562 222 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X obj 581 222 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X obj 603 222 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X obj 623 224 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X obj 644 224 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X msg 710 149 4;
+#X msg 692 122 3;
+#X msg 657 102 2;
+#X obj 582 279 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X floatatom 531 184 5 0 0 0 - - -;
+#X floatatom 662 22 5 0 0 0 - - -;
+#X floatatom 573 54 5 0 0 0 - - -;
+#X obj 597 127 r m_general;
+#X obj 522 7 hradio 15 1 0 8 empty empty empty 0 -8 0 10 -262144 -1
+-1 0;
+#X obj 506 43 + 1;
+#X obj 629 315 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X obj 19 298 dac~ 1 2;
+#X obj 59 22 r test_ritmo;
+#X obj 676 471 s test_ritmo;
+#X obj 665 283 r3;
+#X obj 664 328 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X obj 704 282 r4;
+#X obj 701 341 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X obj 738 282 r5;
+#X obj 667 222 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X obj 736 314 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X obj 582 257 r1;
+#X obj 629 283 r2;
+#X obj 775 283 r6;
+#X obj 768 324 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X obj 695 219 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X obj 811 281 r7;
+#X obj 724 212 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X obj 805 320 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X obj 564 156 gate 8;
+#X msg 107 95 open /Users/juanmanuelbonilla/Documents/Tesis_Pat/PureData/AttackKick003.wav
+;
+#X obj 717 45 r r_voz_uno;
+#X floatatom 760 99 5 0 0 0 - - -;
+#X floatatom 295 398 5 0 0 0 - - -;
+#X connect 0 0 2 0;
+#X connect 1 0 51 0;
+#X connect 1 0 6 0;
+#X connect 2 0 32 0;
+#X connect 2 0 32 1;
+#X connect 4 0 5 0;
+#X connect 5 0 7 0;
+#X connect 5 0 13 1;
+#X connect 6 0 0 0;
+#X connect 8 0 10 0;
+#X connect 9 0 11 0;
+#X connect 9 0 12 0;
+#X connect 11 0 10 0;
+#X connect 12 0 8 0;
+#X connect 13 0 9 0;
+#X connect 16 0 34 0;
+#X connect 17 0 42 0;
+#X connect 18 0 43 0;
+#X connect 19 0 35 0;
+#X connect 20 0 37 0;
+#X connect 24 0 34 0;
+#X connect 28 0 50 1;
+#X connect 29 0 30 0;
+#X connect 30 0 50 0;
+#X connect 31 0 34 0;
+#X connect 33 0 1 0;
+#X connect 35 0 36 0;
+#X connect 36 0 34 0;
+#X connect 37 0 38 0;
+#X connect 38 0 34 0;
+#X connect 39 0 41 0;
+#X connect 40 0 39 0;
+#X connect 41 0 34 0;
+#X connect 42 0 24 0;
+#X connect 43 0 31 0;
+#X connect 44 0 45 0;
+#X connect 45 0 34 0;
+#X connect 46 0 44 0;
+#X connect 47 0 49 0;
+#X connect 48 0 47 0;
+#X connect 49 0 34 0;
+#X connect 50 0 16 0;
+#X connect 50 0 25 0;
+#X connect 50 1 17 0;
+#X connect 50 2 18 0;
+#X connect 50 3 19 0;
+#X connect 50 4 20 0;
+#X connect 50 5 40 0;
+#X connect 50 6 46 0;
+#X connect 50 7 48 0;
+#X connect 51 0 2 0;
+#X connect 52 0 53 0;

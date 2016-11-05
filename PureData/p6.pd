@@ -1,0 +1,35 @@
+#N canvas 619 90 275 290 10;
+#X obj 76 137 paso_4_voces;
+#X obj 202 151 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X obj 75 117 tgl 15 0 empty i61 empty 17 7 0 10 -262144 -1 -1 0 1
+;
+#X obj 92 117 tgl 15 0 empty i62 empty 17 7 0 10 -262144 -1 -1 0 1
+;
+#X obj 109 117 tgl 15 0 empty i63 empty 17 7 0 10 -262144 -1 -1 0 1
+;
+#X obj 128 118 tgl 15 0 empty i64 empty 17 7 0 10 -262144 -1 -1 0 1
+;
+#X obj 74 32 r i61;
+#X obj 92 52 r i62;
+#X obj 109 72 r i63;
+#X obj 127 93 r i64;
+#X obj 145 112 r m6;
+#X obj 76 226 s o61;
+#X obj 99 204 s o62;
+#X obj 122 182 s o63;
+#X obj 144 160 s o64;
+#X connect 0 0 11 0;
+#X connect 0 1 12 0;
+#X connect 0 2 13 0;
+#X connect 0 3 14 0;
+#X connect 2 0 0 0;
+#X connect 3 0 0 1;
+#X connect 4 0 0 2;
+#X connect 5 0 0 3;
+#X connect 6 0 2 0;
+#X connect 7 0 3 0;
+#X connect 8 0 4 0;
+#X connect 9 0 5 0;
+#X connect 10 0 0 4;
+#X connect 10 0 1 0;

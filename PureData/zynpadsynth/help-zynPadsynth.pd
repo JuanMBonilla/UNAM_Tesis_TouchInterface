@@ -1,0 +1,63 @@
+#N canvas 658 122 756 484 10;
+#X obj 373 191 sig~;
+#X obj 287 388 *~;
+#X obj 293 422 dac~;
+#X obj 245 289 vsl 15 128 0 1 0 0 empty empty empty 0 -9 0 10 -262144
+-1 -1 2500 1;
+#X msg 274 335 \$1 4;
+#X obj 278 360 line~;
+#X msg 489 162 list 92.4986 1 2 1 3 0 0 1;
+#X msg 530 182 list 220 1;
+#X obj 388 162 t b f;
+#X text 148 424 raise volume for sound;
+#N canvas 0 22 450 300 midinote 0;
+#X msg 239 165 34;
+#X obj 243 120 loadbang;
+#X obj 168 104 notein;
+#X obj 172 133 stripnote;
+#X obj 190 225 outlet;
+#X connect 0 0 4 0;
+#X connect 1 0 0 0;
+#X connect 2 0 3 0;
+#X connect 2 1 3 1;
+#X connect 3 0 4 0;
+#X restore 390 84 pd midinote;
+#X text 23 8 1st inlet: frequency signal;
+#X text 23 21 2nd inlet: phase;
+#X text 23 50 4th inlet: LIST: base frequency \, harmonic amplitudes
+;
+#X text 289 6 Based on Nasca Octavian Paul's Pad Synth http://zynaddsubfx.sourceforge.net/doc/PADsynth/PADsynth.htm
+;
+#X text 427 42 Author: Paulo Casaes;
+#X text 14 222 There is a few blocks delay in generation;
+#X text 521 397 see for GUIless object:;
+#X obj 528 420 zynpadsynth;
+#X msg 429 134 list 92 4 6 2 0.3 1 0 0.7 0.6 0.5 0.4 0.3 0.2 0.1;
+#X floatatom 390 110 5 0 0 0 - - -;
+#X obj 393 135 mtof;
+#X text 23 35 3rd inlet: regenerate wavetable;
+#X text 17 145 After changing frequency regenerate wavetable to fix
+harmonic amplitudes. Algorithm modified to work with tabosc4~. Uses
+tabread4~ to scale amplitude list according to base frequency/frequency
+(could be better).;
+#X text 430 375 set regenerate_loop_in_ms to 0 to disable;
+#X text 17 77 Takes two creation argument \, the first should be a
+file located in zynpadsynth/presets/ with saved settings. The second
+the blocksize for rendering (default 64);
+#X text 446 53 ver 2.1 \, 2009-08-01;
+#X obj 349 212 zynPadsynthGUI melow.txt 512;
+#X connect 0 0 27 0;
+#X connect 1 0 2 0;
+#X connect 1 0 2 1;
+#X connect 3 0 4 0;
+#X connect 4 0 5 0;
+#X connect 5 0 1 0;
+#X connect 6 0 27 3;
+#X connect 7 0 27 3;
+#X connect 8 0 27 2;
+#X connect 8 1 0 0;
+#X connect 10 0 20 0;
+#X connect 19 0 27 3;
+#X connect 20 0 21 0;
+#X connect 21 0 8 0;
+#X connect 27 0 1 1;
